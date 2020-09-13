@@ -19,7 +19,7 @@
     <!--Шапка сайта -->
 
     <header>
-      <div class="container heder">
+      <div class="container heder flexbox">
         <nav class="navigation">
           <a href="./index.html" class="logo">
             Web<span class="colortext">Studio</span>
@@ -27,12 +27,12 @@
 
           <ul class="site-nav list">
             <li class="menu-list"
-              ><a href="index.html#bottom" class="link">Студия</a></li
+              ><a href="index.html#bottom" class="link accent">Студия</a></li
             >
             <li class="menu-list"
-              ><a href="portfolio.html#bottom" class="link-a">Портфолио</a>
+              ><a href="portfolio.html#bottom" class="link">Портфолио</a>
             </li>
-            <li class="menu-list"><a href="" class="link-a">Контакты</a></li>
+            <li class="menu-list"><a href="" class="link">Контакты</a></li>
           </ul>
         </nav>
         <ul class="mail-box list">
@@ -65,14 +65,19 @@
             ЭФФЕКТИВНОЕ РЕШЕНИЯ <br />
             ДЛЯ ВАШЕГО БИЗНЕСА
           </h1>
-          <form>
-            <p
-              ><input
+          <button type="button" class="button-title" data-modal-open
+            >Заказать услугу</button
+          >
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal"
+              ><button
                 type="button"
-                class="button-title"
-                value=" Заказать услугу "
-            /></p>
-          </form>
+                class="button-modal flexbox"
+                data-modal-close
+                ><svg class="icon-close">Закрыть</svg></button
+              ></div
+            >
+          </div>
         </div>
       </section>
 
@@ -119,21 +124,28 @@
 
           <ul class="title list">
             <li class="title-list">
-              <p>
+              <div class="our-work-blok">
                 <img
                   src="./images/img1.jpg"
                   alt="Программирование"
                   width="370"
                 />
-              </p>
+                <p class="text-our-work">Десктопные приложения</p></div
+              >
             </li>
             <li class="title-list">
-              <p>
+              <div class="our-work-blok">
                 <img src="./images/img2.jpg" alt="Тестирование" width="370" />
-              </p>
+                <p class="text-our-work">Мобильные приложения</p></div
+              >
             </li>
             <li class="title-list">
-              <p><img src="./images/img3.jpg" alt="Дизайн" width="370" /></p>
+              <div class="our-work-blok">
+                <img src="./images/img3.jpg" alt="Дизайн" width="370" /><p
+                  class="text-our-work"
+                  >Дизайнерские решения</p
+                ></div
+              >
             </li>
           </ul>
         </div>
@@ -543,5 +555,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
